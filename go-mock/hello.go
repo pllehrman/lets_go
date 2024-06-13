@@ -4,8 +4,14 @@ import (
 	"fmt"
 )
 
+// Constants can be good in terms of capturing values and aiding performance.
+const helloPrefix = "Hello, "
+
 func Hello(name string) string {
-	return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	return helloPrefix + name
 }
 
 func main() {
